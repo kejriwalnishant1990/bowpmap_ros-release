@@ -1,3 +1,26 @@
+## bowpmap_ros-release (indigo) - 0.1.2-1
+
+The packages in the `bowpmap_ros-release` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo bowpmap_ros-release --edit` on `Sat, 08 Oct 2016 10:02:03 -0000`
+
+The `bowpmap_ros` package was released.
+
+Version of package(s) in repository `bowpmap_ros-release`:
+
+- upstream repository: https://github.com/kejriwalnishant1990/bowpmap_ros.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `0.1.2-0`
+- new version: `0.1.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.5.22`
+- catkin_pkg version: `0.2.10`
+- rosdep version: `0.11.5`
+- rosdistro version: `0.4.7`
+- vcstools version: `0.1.38`
+
+
 ## bowpmap_ros-release (indigo) - 0.1.2-0
 
 The packages in the `bowpmap_ros-release` repository were released into the `indigo` distro by running `/usr/bin/bloom-release --rosdistro indigo --track indigo bowpmap_ros-release --edit` on `Sat, 08 Oct 2016 09:49:35 -0000`
