@@ -1,0 +1,33 @@
+<launch>
+
+	<!-- BoWP-Map ARGUMENTS: 
+        -"matching_threshold" : Matching Threshold for deciding loop closure
+        -"distance" : Nearest neighbor distance
+        -"hessian" :   Hessain Threshold, All the descriptors which has threshold greater than hessian. 
+        -"noOfDescriptors" :  Number of descriptors per image
+        -"candidates" : Number of verification candidates
+        -"loopProbability" : Loop Closure Probability : Minimum probability to go for geometrical verification.
+    	-->
+
+ 	<arg name="matching_threshold" default="15" />
+   	<arg name="distance" default="0.3" />
+   	<arg name="hessian" default="100" />
+	<arg name="noOfDescriptors" default="1000" />
+   	<arg name="candidates" default="1" />
+   	<arg name="loopProbability" default="0.1" />
+
+          <remap from="rgb/image" to="/camera/rgb/image_color" />
+
+
+    <node pkg="bowpmap_ros" type="bowpMapping_ros" name="bowpMapping_ros" output="screen" cwd="node">
+	  <param name="MATCHING_THRESHOLD" type="double" value="$(arg matching_threshold)"/> 
+	  <param name="DIST_RATIO" type="double" value="$(arg distance)"/> 
+	  <param name="HESSAIN_THRESHOLD" type="int" value="$(arg hessian)"/> 
+	  <param name="DESCRIPTORS_PER_IMAGE" type="int" value="$(arg noOfDescriptors)"/> 
+	  <param name="NO_OF_VERIFICATION_CANDIDATES" type="int" value="$(arg candidates)"/> 
+	  <param name="LOOP_CLOSURE_HYPOTHESIS_THRESHOLD" type="double" value="$(arg loopProbability)"/> 
+
+    </node>
+
+
+</launch>
